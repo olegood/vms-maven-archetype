@@ -1,0 +1,1 @@
+# vms-maven-archetype
