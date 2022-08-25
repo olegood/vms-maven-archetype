@@ -1,0 +1,26 @@
+import org.codehaus.plexus.util.FileUtils;
+
+import java.io.File;
+
+    File testClassesProjectsDir = new File("target/test-classes/projects");
+
+    File projectDir = new File(testClassesProjectsDir, "test-java-version/project/test-java-version");
+
+    File pomXmlFile = new File(projectDir, "pom.xml");
+    if (!pomXmlFile.exists()) {
+        throw new Exception(pomXmlFile + " is missing.");
+    }
+
+    static boolean checkContainsValue(String content, CharSequence value) throws Exception {
+        if (content == null || !content.contains(value)) {
+            throw new Exception("Expected value '" + value + "' is not present.");
+        }
+        return true;
+    }
+
+    try {
+        String content = FileUtils.fileRead(pomXmlFile, "UTF-8");
+        checkContainsValue(content, "<java.version>11</java.version>");
+    } catch (Exception cause) {
+        throw new Exception("Test failure: " + cause.getMessage());
+    }

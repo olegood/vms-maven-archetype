@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>olegood.vms</groupId>
+    <artifactId>vms-maven-archetype</artifactId>
+    <packaging>maven-archetype</packaging>
+
+    <version>1.0-SNAPSHOT</version>
+
+    <name>VMS Maven Archetype</name>
+
+    <description>
+        Maven template that creates a minimal project as a starting point for new application service.
+    </description>
+
+    <properties>
+        <maven.archetype.version>3.2.1</maven.archetype.version>
+    </properties>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>${maven.archetype.version}</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <developers>
+        <developer>
+            <id>olegood</id>
+            <name>Oleg Anastassov</name>
+            <email>oleg.anastassov@gmail.com</email>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <contributors/>
+
+</project>

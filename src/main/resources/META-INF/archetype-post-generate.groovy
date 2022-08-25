@@ -1,0 +1,1 @@
+println "Running 'archetype-post-generate.groovy' script..."
