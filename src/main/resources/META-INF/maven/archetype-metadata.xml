@@ -34,12 +34,14 @@
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
             <directory>src/test/resources</directory>
         </fileSet>
-        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
             <directory/>
             <includes>
                 <include>.gitignore</include>
                 <include>CHANGELOG.md</include>
+                <include>CODE_OF_CONDUCT.md</include>
                 <include>LICENSE</include>
+                <include>README.md</include>
             </includes>
         </fileSet>
     </fileSets>
