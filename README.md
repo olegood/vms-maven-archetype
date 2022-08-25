@@ -6,8 +6,7 @@ Maven template that creates a minimal project as a starting point for new applic
 
 To generate a project, adjust the following command line to your needs:
 
-- Adjust `artifactId=vms-engine` to define the Maven artifact.
-- Adjust `groupId="olegood.vms"` to define the Maven groupId and the Java Source Package.
+- Adjust `appName=engine` to define the application name.
 - Lookup the list of [available properties](#available-properties) to see if there's more you want to adjust.
 
 ```shell
@@ -15,19 +14,20 @@ mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
  -D archetypeGroupId=olegood.vms \
  -D archetypeArtifactId=vms-maven-archetype \
  -D archetypeVersion=1.0 \
- -D artifactId=vms-engine
+ -D appName=engine
 ```
 
 ## Available Properties
 
-| Name            | Default        | Description                                                                                                                    |
-|-----------------|----------------|--------------------------------------------------------------------------------------------------------------------------------|
-| `artifactId`    |                | Base Maven artifact ID (e.g. `vms-engine`).                                                                                    |
-| `groupId`       | `olegood.vms`  | Base Maven group ID (e.g. `olegood.vms`).                                                                                      |
-| `javaVersion`   | `17`           | Java Development Kit version.                                                                                                  |
-| `package`       | `${groupId}`   | Java Source Package (e.g. `olegood.vms`).                                                                                      |
-| `parentVersion` | `2.7.3`        | Spring Boot Starter Parent ([latest](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent)). |
-| `version`       | `1.0-SNAPSHOT` | Project version (e.g. `1.0-SNAPSHOT`).                                                                                         |
+| Name            | Default                  | Description                                                                                                                    |
+|-----------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `appName`       |                          | Application name (e.g. `engine`).                                                                                              |
+| `artifactId`    | `vms-${appName}`         | Base Maven artifact ID (e.g. `vms-engine`).                                                                                    |
+| `groupId`       | `olegood.vms.${appName}` | Base Maven group ID (e.g. `olegood.vms.engine`).                                                                               |
+| `javaVersion`   | `17`                     | Java Development Kit version.                                                                                                  |
+| `package`       | `${groupId}`             | Java Source Package (e.g. `olegood.vms.engine`).                                                                               |
+| `parentVersion` | `2.7.3`                  | Spring Boot Starter Parent ([latest](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent)). |
+| `version`       | `1.0-SNAPSHOT`           | Project version (e.g. `1.0-SNAPSHOT`).                                                                                         |
 
 **Note:** sorted alphabetically.
 

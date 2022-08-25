@@ -4,7 +4,7 @@ import java.io.File;
 
     File testClassesProjectsDir = new File("target/test-classes/projects");
 
-    File projectDir = new File(testClassesProjectsDir, "test-java-version/project/test-java-version");
+    File projectDir = new File(testClassesProjectsDir, "test-java-version/project/jversion");
 
     File pomXmlFile = new File(projectDir, "pom.xml");
     if (!pomXmlFile.exists()) {

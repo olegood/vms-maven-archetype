@@ -2,7 +2,7 @@ import java.io.File;
 
     File testClassesProjectsDir = new File("target/test-classes/projects");
 
-    File projectDir = new File(testClassesProjectsDir, "test-main-class/project/test-main-class");
+    File projectDir = new File(testClassesProjectsDir, "test-main-class/project/mclazz");
 
     static boolean checkFileExistence(File file) throws Exception {
         if (file == null || !file.exists()) {
@@ -11,8 +11,8 @@ import java.io.File;
         return true;
     }
 
-    File mainClass = new File(projectDir, "src/main/java/olegood/vms/Main.java");
+    File mainClass = new File(projectDir, "src/main/java/olegood/vms/mclazz/Main.java");
     checkFileExistence(mainClass);
 
-    File mainClassTest = new File(projectDir, "src/test/java/olegood/vms/MainTest.java");
+    File mainClassTest = new File(projectDir, "src/test/java/olegood/vms/mclazz/MainTest.java");
     checkFileExistence(mainClassTest);

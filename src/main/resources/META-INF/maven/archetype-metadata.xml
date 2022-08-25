@@ -5,9 +5,15 @@
                       name="vms-maven-archetype" partial="true">
 
     <requiredProperties>
-        <requiredProperty key="artifactId"/>
+        <requiredProperty key="appName"/>
+        <requiredProperty key="artifactId">
+            <defaultValue>vms-${appName}</defaultValue>
+        </requiredProperty>
         <requiredProperty key="groupId">
-            <defaultValue>olegood.vms</defaultValue>
+            <defaultValue>olegood.vms.${appName}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="package">
+            <defaultValue>${groupId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
             <defaultValue>1.0-SNAPSHOT</defaultValue>
